@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="intro" focusTraversable="true" prefHeight="503.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.IntroController">
+   <children>
+      <ImageView blendMode="DARKEN" fitHeight="503.0" fitWidth="1000.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/intro.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e40f9" height="253.0" layoutX="467.0" layoutY="169.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="255.0" />
+      <Label fx:id="title" layoutX="135.0" layoutY="19.0" text="Cosmic Conundrum: The Alien Escape" textFill="#ffa723">
+         <font>
+            <Font name="Tamil MN" size="41.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="65.0" fitWidth="242.0" layoutX="28.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/blue_button02.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/blue_button02.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="494.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/red_button00.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="41.0" layoutY="116.0" text="Please choose your level :" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="377.0" text="Please select a time:" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="18.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="560.0" layoutY="452.0" text="START" textAlignment="CENTER" textFill="#3640ab">
+         <font>
+            <Font name="Tamil MN" size="22.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="start" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="47.0" layoutX="494.0" layoutY="442.0" onMouseClicked="#startGame" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Button fx:id="easy" layoutX="28.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#easyPicked" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: #2E40F9;" text="EASY" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="medium" layoutX="28.0" layoutY="223.0" mnemonicParsing="false" onMouseClicked="#mediumPicked" prefHeight="10.0" prefWidth="98.0" style="-fx-background-color: #2E40F9;" text="MEDIUM" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="difficult" layoutX="28.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#difficultPicked" prefHeight="22.0" prefWidth="98.0" style="-fx-background-color: #2E40F9;" text="DIFFICULT" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="chooseEasy" layoutX="144.0" layoutY="185.0" prefHeight="17.0" prefWidth="82.0" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="chooseMedium" layoutX="144.0" layoutY="229.0" prefHeight="17.0" prefWidth="82.0" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="chooseDifficult" layoutX="144.0" layoutY="269.0" prefHeight="17.0" prefWidth="82.0" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="twoMin" layoutX="26.0" layoutY="437.0" mnemonicParsing="false" onMouseClicked="#twoPicked" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: #2E40F9;" text="2 Minutes" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="sixMin" layoutX="229.0" layoutY="437.0" mnemonicParsing="false" onMouseClicked="#sixPicked" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: #2E40F9;" text="6 Minutes" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="fourMin" layoutX="126.0" layoutY="437.0" mnemonicParsing="false" onMouseClicked="#fourPicked" prefHeight="28.0" prefWidth="82.0" style="-fx-background-color: #2E40F9;" text="4 Minutes" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="minTwo" layoutX="26.0" layoutY="466.0" prefHeight="17.0" prefWidth="82.0" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="minFour" layoutX="126.0" layoutY="466.0" prefHeight="17.0" prefWidth="82.0" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="minSix" layoutX="229.0" layoutY="466.0" prefHeight="17.0" prefWidth="82.0" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="65.0" fitWidth="242.0" layoutX="473.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/blue_button02.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="549.0" layoutY="116.0" text="OBJECTIVE" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="startStatus" layoutX="482.0" layoutY="405.0" prefHeight="17.0" prefWidth="242.0" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="levelDetail" layoutX="26.0" layoutY="295.0" prefHeight="62.0" prefWidth="391.0" textFill="#fffffe" wrapText="true">
+         <font>
+            <Font name="Telugu MN" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="alien" fitHeight="150.0" fitWidth="200.0" layoutX="781.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/move1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="474.0" layoutY="161.0" prefHeight="268.0" prefWidth="242.0" text="Welcome, brave adventurer, to the heart of this alien spaceship. Your mission, should you choose to accept it, is to overcome all my challenges and puzzles to unlock the sealed doors, and make your escape. Time is of the essence, for if you do not escape in time, you will be trapped in this alien realm for eternity. The fate of your escape rests in your wits and determination. Best of luck, and may you unlock the secrets of the cosmos!" textFill="#f8f7f6" wrapText="true">
+         <font>
+            <Font name="Tamil MN" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="807.0" layoutY="357.0" prefHeight="35.0" prefWidth="98.0" text="⏃⌰⟟⟒⋏" textAlignment="CENTER" textFill="#fcb141" wrapText="true">
+         <font>
+            <Font name="Tamil MN" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="786.0" layoutY="405.0" text="The Alien Gamemaster" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="1000.0" style="-fx-background-color: #21464B;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.DecryptController">
+   <children>
+      <Label layoutX="436.0" layoutY="10.0" text="A    B    C    D    E    F    G " textFill="WHITE">
+         <font>
+            <Font name="Telugu MN" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="44.0" text="⏃ ⏚ ☊ ⎅ ⟒ ⎎ ☌" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="95.0" text="H    I    J    K    L    M    N" textFill="WHITE">
+         <font>
+            <Font name="Telugu MN" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="129.0" text="⊑ ⟟  ⟊  ☍ ⌰  ⋔   ⋏" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="180.0" text="O    P    Q    R    S    T    U" textFill="WHITE">
+         <font>
+            <Font name="Telugu MN" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="214.0" text="⍜  ⌿ ⍾  ⍀ ⌇  ⏁ ⎍ " textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="265.0" text="V    W    X    Y    Z" textFill="WHITE">
+         <font>
+            <Font name="Telugu MN" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="438.0" layoutY="299.0" text="⎐ ⍙  ⌖  ⊬ ⋉" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="decryptTimer" layoutX="878.0" layoutY="12.0" prefHeight="53.0" prefWidth="91.0" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="36.0" />
+         </font></Label>
+      <TextField fx:id="inputText" layoutX="14.0" layoutY="440.0" prefHeight="26.0" prefWidth="488.0" style="-fx-background-color: BABFEE;" />
+      <Button fx:id="sendButton" layoutX="511.0" layoutY="440.0" mnemonicParsing="false" onAction="#onSendMessage" style="-fx-background-color: #2E40F9;" text="Send" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="374.0" fitWidth="400.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/18157432-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="message" editable="false" layoutX="29.0" layoutY="24.0" prefHeight="200.0" prefWidth="370.0" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font>
+      </TextArea>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8ce89c" height="200.0" layoutX="29.0" layoutY="24.0" opacity="0.37" stroke="BLACK" strokeType="INSIDE" width="370.0" />
+      <Button layoutX="653.0" layoutY="440.0" mnemonicParsing="false" onAction="#onGoBack" style="-fx-background-color: #2E40F9;" text="Go Back" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="13.0" />
+         </font>
+      </Button>
+      <Canvas fx:id="decryptGameMaster" height="89.0" layoutX="643.0" layoutY="322.0" width="115.0" />
+      <Rectangle fx:id="quizMaster" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="126.0" layoutX="619.0" layoutY="299.0" onMouseClicked="#clickQuizMaster" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="142.0" />
+      <Label layoutX="777.0" layoutY="28.0" text="Time:" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="19.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <Label layoutX="777.0" layoutY="67.0" text="Current Objective: " textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="19.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <Label layoutX="777.0" layoutY="179.0" text="Hints" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <Label layoutX="777.0" layoutY="408.0" text="Items Collected" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <TextArea fx:id="objText" editable="false" layoutX="776.0" layoutY="93.0" prefHeight="78.0" prefWidth="200.0" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></TextArea>
+      <TextArea fx:id="hintsText" editable="false" layoutX="776.0" layoutY="196.0" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></TextArea>
+      <ImageView fx:id="tape" fitHeight="36.0" fitWidth="42.0" layoutX="776.0" layoutY="430.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tape.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sdCard" fitHeight="36.0" fitWidth="42.0" layoutX="776.0" layoutY="465.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sdcard.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="incorrect" layoutX="14.0" layoutY="475.0" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="rgbClue1" layoutX="896.0" layoutY="430.0" mnemonicParsing="false" opacity="0.2" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #2E40F9;" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="16.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="globe" fitHeight="36.0" fitWidth="42.0" layoutX="844.0" layoutY="430.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/GlobeItem.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

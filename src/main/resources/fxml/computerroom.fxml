@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="computerrrom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="1000.0" style="-fx-background-color: #21464B;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.ComputerRoomController">
+
+   <children>
+      <ImageView fitHeight="503.0" fitWidth="757.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/ComputerRoom.png" />
+         </image>
+      </ImageView>
+      <Canvas fx:id="computerRoomGameMaster" height="89.0" layoutX="578.0" layoutY="393.0" width="142.0" />
+      <Rectangle fx:id="quizMater" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="121.0" layoutX="578.0" layoutY="361.0" onMouseClicked="#clickComputerRoomQuizMaster" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="142.0" />
+      <Label fx:id="computerRoomTimer" layoutX="878.0" layoutY="12.0" prefHeight="53.0" prefWidth="91.0" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="hoverImage" fitHeight="111.0" fitWidth="131.0" layoutX="302.0" layoutY="292.0" onMouseClicked="#enterDecrypt" onMouseEntered="#increaseSize" onMouseExited="#decreaseSize" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/ComputerHover.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tape" fitHeight="40.0" fitWidth="36.0" layoutX="14.0" layoutY="459.0" onMouseClicked="#clickTape" onMouseEntered="#increaseTapeSize" onMouseExited="#decreaseTapeSize" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+         <image>
+            <Image url="@../images/tape.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="777.0" layoutY="28.0" text="Time:" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="19.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <Label layoutX="777.0" layoutY="67.0" text="Current Objective:" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="19.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <Label layoutX="777.0" layoutY="179.0" text="Hints" textFill="#fcb141">
+         <font>
+            <Font name="Sinhala MN" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <Label layoutX="777.0" layoutY="408.0" text="Items Collected" textFill="#fcb141">
+         <font>
+            <Font name="Tamil MN" size="13.0" />
+         </font>
+         <effect>
+            <Glow level="0.7" />
+         </effect>
+      </Label>
+      <TextArea fx:id="objText" editable="false" layoutX="776.0" layoutY="93.0" prefHeight="78.0" prefWidth="200.0" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></TextArea>
+      <TextArea fx:id="hintsText" editable="false" layoutX="776.0" layoutY="196.0" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></TextArea>
+      <ImageView fx:id="tape1" fitHeight="36.0" fitWidth="42.0" layoutX="776.0" layoutY="430.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/tape.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sdCard" fitHeight="36.0" fitWidth="42.0" layoutX="776.0" layoutY="465.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/sdcard.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="globe" fitHeight="36.0" fitWidth="42.0" layoutX="844.0" layoutY="430.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/GlobeItem.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="toLockedRoom" fitHeight="150.0" fitWidth="130.0" layoutX="646.0" layoutY="-8.0" onMouseClicked="#enterLockedRoom" onMouseEntered="#highlightRightArrow" onMouseExited="#removeHighlightRightArrow" opacity="0.3" pickOnBounds="true">
+         <image>
+            <Image url="@../images/arrow.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="rgbClue1" layoutX="897.0" layoutY="430.0" mnemonicParsing="false" opacity="0.2" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #2E40F9;" textFill="#fcb141">
+         <font>
+            <Font name="Telugu MN" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
